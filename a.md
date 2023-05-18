@@ -8,7 +8,12 @@ if {[string match "Hello,*" $str]} {
     puts "The string does not start with 'Hello'."
 }
 ```
-注意使用的是```string match ```
+- 注意使用的是```string match ```
+- ? 通配符可以匹配一个字符
+- *通配符表示可以包含任意数量的字符（包括零个字符）
+- [] 来指定一个字符集，以及 ^ 符号来指定一个否定字符集
+- 在 TCL 的许多命令和函数中都可以使用通配符，例如 string match、regexp、glob 等等
+
 
 ### tcl中使用正则表达式
 ```tcl
