@@ -13,7 +13,13 @@ if {[string match "Hello,*" $str]} {
 - *通配符表示可以包含任意数量的字符（包括零个字符）
 - [] 来指定一个字符集，以及 ^ 符号来指定一个否定字符集
 - 在 TCL 的许多命令和函数中都可以使用通配符，例如 string match、regexp、glob 等等
-
+### glob使用举例
+``` tcl
+set path {/home/user/documents/{project1,project2}/*.txt}
+foreach file [glob -nocomplain $path] {
+   puts $file
+}
+```
 
 ### tcl中使用正则表达式
 ```tcl
